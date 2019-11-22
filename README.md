@@ -11,7 +11,7 @@ The following steps will help you setting up your own dcraspaper.
 ### Configuring your Pi
 Please download the latest [Raspian lite](https://www.raspberrypi.org/downloads/raspbian/) and write the image onto a sd card. The next steps will enable you to access the device via ssh and preconfigure a wifi connection.
 #### ssh access
-Since the Raspian Buster release the ssh server is disabled by default. To enable the ssh server you have to generatie an empty file called `ssh` in the root folder of the `boot` partition. You will now be able to connect via ssh with the username `pi`and password `raspberry`.
+Since the Raspian Buster release the ssh server is disabled by default. To enable the ssh server you have to generate an empty file called `ssh` in the root folder of the `boot` partition. You will now be able to connect via ssh with the username `pi`and password `raspberry`.
 #### wifi connection
 You can have your Pi automatically connect to your wifi network by editing the `etc/wpa_supplicant/wpa_supplicant.conf` file with the following config example. Please replace your wifi credentials and encryption.
 ```

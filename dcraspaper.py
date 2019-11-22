@@ -84,7 +84,6 @@ try:
 
        logging.info(str(datetime.datetime.now()) + " - Connecting politeia")
        politeiactivevote_url = urllib2.urlopen('https://proposals.decred.org/api/v1/proposals/activevote')
-       # politeiactivevote_url = urllib2.urlopen('http://dev.urbandigital.de/result.json')
 
        politeiactivevote_json = json.loads(politeiactivevote_url.read())
        activevote_sum = len(politeiactivevote_json['votes'])
@@ -101,7 +100,6 @@ try:
                        proposal_name =  v1['name']
                        proposal_token = v1['censorshiprecord']['token']
                        proposal_url = urllib2.urlopen('https://proposals.decred.org/api/v1/proposals/'+proposal_token+'/votestatus')
-                       # proposal_url = urllib2.urlopen('http://dev.urbandigital.de/prop.json')
                        logging.info(str(datetime.datetime.now()) + " - Requesting votestatus for proposal "+proposal_name)
                        proposalstatus_json = json.loads(proposal_url.read())
                        proposal_totalvotes = proposalstatus_json['totalvotes']
